@@ -1,0 +1,24 @@
+package chapter4;
+
+import java.util.Scanner;
+public class CASHIER {
+public static void main(String arg[]){
+    System.out.println("Enter the number of items you would you like to scan:");
+    Scanner scanner = new Scanner(System.in);
+
+    int quantity = scanner.nextInt();
+
+    double total = 0;
+    for(int i=0; i<quantity; i++){
+
+        System.out.println("Enter the cost of the item:");
+        double price = scanner.nextDouble();
+
+        total = total + price;
+    }
+scanner.close();
+
+    System.out.println("Your total is $" + total);
+}
+
+}
